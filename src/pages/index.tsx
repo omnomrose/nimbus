@@ -111,7 +111,7 @@ export default function Home() {
               <div key={index} className={styles.dailyContainer} style={{ borderBottom: index !== fiveDay.length - 1 ? '1px solid var(--grey)' : 'none' }}>
                   <div className={styles.dayContainer}>
                     <div className={styles.dateIcon}>
-                      <p>{dateFix(five.dt_txt)}</p>
+                      <p>{dateFix(five.dt_txt).toLocaleLowerCase()}</p>
                         <Image
                           src={`/icon/${five.weather[0].main.toLocaleLowerCase()}.svg`}
                           alt="icon"
