@@ -81,7 +81,7 @@ export default function Home() {
                   {currentData.sys.country.toLocaleLowerCase()}
                 </p>
                   <Image
-                    src={`/icon/${currentData.weather[0].main}.svg`}
+                    src={`/icon/${currentData.weather[0].main.toLocaleLowerCase()}.svg`}
                     alt={currentData.weather[0].main}
                     width={25} 
                     height={25}
@@ -113,7 +113,7 @@ export default function Home() {
                     <div className={styles.dateIcon}>
                       <p>{dateFix(five.dt_txt)}</p>
                         <Image
-                          src={`/icon/${five.weather[0].main}.svg`}
+                          src={`/icon/${five.weather[0].main.toLocaleLowerCase()}.svg`}
                           alt="icon"
                           width={25} 
                           height={25}
